@@ -128,9 +128,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contact {
@@ -138,9 +136,7 @@ img {
   color: var(--primaty-text-color);
   text-decoration: none;
   align-items: center;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link {
   position: relative;
@@ -389,9 +385,7 @@ img {
   border-radius: 50%;
   color: #afb1b8;
   background-color: #fff;
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color, background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   fill: currentColor;
@@ -421,6 +415,7 @@ img {
   transition-property: fill, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: fill, border 1000ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .Regular-customers:hover,
 .Regular-customers:focus {
@@ -463,9 +458,8 @@ img {
   border-radius: 50%;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-footer:hover,
 .social-link-footer:focus {
@@ -510,9 +504,8 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-footer-list {
@@ -554,6 +547,12 @@ img {
   border: 0px solid transparent;
   border-radius: 4px;
   padding: 6px 22px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* transition: background-color, color,
+    box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .button-portfolio {
   display: flex;
@@ -602,6 +601,7 @@ img {
   left: 0;
   right: 0;
   z-index: 1;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-work > a:hover,
 .projects-work > a:focus {
@@ -624,29 +624,31 @@ img {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .card-tumba :hover::before {
-  opacity: 1;
-} */
 
 .projects-work > a:hover + .card-tumba::before,
 .projects-work > a:focus + .card-tumba::before {
   opacity: 1;
+  transform: translateY(-50px);
 }
 .card-tumda-title {
-  display: block;
-  line-height: 28px;
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  opacity: 0;
   position: absolute;
   top: 63px;
   left: 24px;
   right: 24px;
-
-  opacity: 0;
+  display: block;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-work:hover .card-tumda-title {
   opacity: 1;
+  transform: translateY(-50px);
 }
 .projects > .projects-scroll {
   flex-basis: calc(100% / 3 - var(--cart-set-gap));
@@ -705,6 +707,7 @@ img {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover {
